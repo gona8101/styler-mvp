@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>styler</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="phone">
+    <header class="topbar">
+      <div class="brand">styler</div>
+      <div class="icons">⌕ ♡ 🛒</div>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">AUTUMN 2026</span>
+      <h1>매일 입고 싶은<br/>가을 스타일</h1>
+      <p>지금 필요한 옷부터 천천히 찾아보세요.</p>
+      <button onclick="location.href='products.html?gender=WOMEN'">WOMEN 보기</button>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>카테고리</h2></div>
+      <div class="chips">
+        <a href="products.html?gender=WOMEN">WOMEN</a>
+        <a href="products.html?gender=MEN">MEN</a>
+        <a href="products.html?category=아우터">OUTER</a>
+        <a href="products.html?category=신발">SHOES</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>지금 많이 보는 상품</h2>
+        <a href="products.html">전체보기</a>
+      </div>
+      <div id="featured" class="grid"></div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a class="active" href="index.html"><span>⌂</span>홈</a>
+      <a href="products.html"><span>▦</span>카테고리</a>
+      <a href="ai.html"><span>✦</span>AI 쇼핑</a>
+      <a href="#"><span>♡</span>찜</a>
+      <a href="#"><span>○</span>마이</a>
+    </nav>
+  </main>
+  <script src="app.js"></script>
+  <script>loadFeatured();</script>
+</body>
+</html>

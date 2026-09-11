@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>상품 목록 · styler</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="phone">
+    <header class="topbar three">
+      <button class="icon-btn" onclick="history.back()">←</button>
+      <div class="page-title">상품</div>
+      <div class="icons">⌕ ♡</div>
+    </header>
+
+    <section class="section compact">
+      <div class="chips" id="filterChips">
+        <button data-filter="all" class="selected">전체</button>
+        <button data-filter="아우터">아우터</button>
+        <button data-filter="상의">상의</button>
+        <button data-filter="하의">하의</button>
+        <button data-filter="가방">가방</button>
+        <button data-filter="신발">신발</button>
+      </div>
+      <div class="sort-row">
+        <span id="resultCount">0개 상품</span>
+        <button>추천순 ▾</button>
+      </div>
+      <div id="productGrid" class="grid"></div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="index.html"><span>⌂</span>홈</a>
+      <a class="active" href="products.html"><span>▦</span>카테고리</a>
+      <a href="ai.html"><span>✦</span>AI 쇼핑</a>
+      <a href="#"><span>♡</span>찜</a>
+      <a href="#"><span>○</span>마이</a>
+    </nav>
+  </main>
+  <script src="app.js"></script>
+  <script>loadProducts();</script>
+</body>
+</html>
