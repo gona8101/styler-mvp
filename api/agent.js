@@ -12,7 +12,10 @@ function normalizeGender(v=''){
   const x=norm(v);
   if(['women','woman','female','여성','여자'].includes(x)) return 'women';
   if(['men','man','male','남성','남자'].includes(x)) return 'men';
-  return x;
+  // 성별을 지정하지 않았거나 '공용/전체'처럼 들어오면 성별 필터를 걸지 않는다.
+  if(['','all','any','unisex','공용','전체','상관없음','무관'].includes(x)) return '';
+  // 예상하지 못한 값은 필터 오작동을 막기 위해 비워둔다.
+  return '';
 }
 
 function normalizeCategory(v=''){
@@ -70,9 +73,9 @@ function searchProducts(products,args={}){
   const g=normalizeGender(gender);
   const aliases=colorAliases(wantedColor);
 
-  return products.map(p=>{
+  const runSearch=(useGender=true)=>products.map(p=>{
     const pg=normalizeGender(p.gender);
-    if(g && pg!==g) return null;
+    if(useGender && g && pg!==g) return null;
 
     if(c){
       const pc=norm(`${p.category} ${p.subcategory} ${p.name}`);
@@ -98,6 +101,12 @@ function searchProducts(products,args={}){
     return {p,score};
   }).filter(Boolean).sort((a,b)=>b.score-a.score||a.p.price-b.p.price)
     .slice(0,Math.max(1,Math.min(Number(limit)||6,8))).map(x=>x.p);
+
+  let results=runSearch(true);
+  // LLM이 사용자가 말하지 않은 성별(예: unisex/공용)을 임의로 넣어도
+  // 실제 상품이 사라지지 않도록, 결과가 0개면 성별 필터를 자동 해제해서 한 번 더 검색한다.
+  if(!results.length && g) results=runSearch(false);
+  return results;
 }
 function getProduct(products,args={}){ return products.find(p=>norm(p.id)===norm(args.id))||null; }
 
