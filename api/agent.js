@@ -8,22 +8,97 @@ function readProducts(){
   return JSON.parse(fs.readFileSync(path.join(process.cwd(),'data','products.json'),'utf8'));
 }
 
-function searchProducts(products,args={}){
-  const {query='',category='',gender='',max_price=null,color='',limit=6}=args;
-  const qTokens = String(query).toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').split(' ').map(norm).filter(Boolean);
-  const c=norm(category), g=norm(gender), col=norm(color);
-  return products.map(p=>{
-    if(g && norm(p.gender)!==g) return null;
-    if(c && !norm(`${p.category} ${p.subcategory}`).includes(c)) return null;
-    if(max_price!=null && Number(p.price)>Number(max_price)) return null;
-    if(col && !(p.colors||[]).some(x=>norm(x).includes(col))) return null;
-    const hay=norm([p.name,p.gender,p.category,p.subcategory,...(p.colors||[]),...(p.style||[]),...(p.occasions||[]),p.fit,p.length,p.agent_notes].join(' '));
-    let score=0; for(const t of qTokens) if(hay.includes(t)) score+=2;
-    if(col&&hay.includes(col)) score+=3; if(c&&hay.includes(c)) score+=2;
-    return {p,score};
-  }).filter(Boolean).sort((a,b)=>b.score-a.score||a.p.price-b.p.price).slice(0,Math.max(1,Math.min(Number(limit)||6,8))).map(x=>x.p);
+function normalizeGender(v=''){
+  const x=norm(v);
+  if(['women','woman','female','여성','여자'].includes(x)) return 'women';
+  if(['men','man','male','남성','남자'].includes(x)) return 'men';
+  return x;
 }
 
+function normalizeCategory(v=''){
+  const x=norm(v);
+  if(['재킷','자켓','jacket','블루종'].some(k=>x.includes(norm(k)))) return '재킷';
+  if(['아우터','outer','outerwear'].some(k=>x.includes(norm(k)))) return '아우터';
+  if(['상의','탑','top','셔츠','니트','티셔츠'].some(k=>x.includes(norm(k)))) return '상의';
+  if(['팬츠','바지','하의','pants','bottom'].some(k=>x.includes(norm(k)))) return '팬츠';
+  if(['신발','슈즈','shoes','로퍼','스니커즈','더비'].some(k=>x.includes(norm(k)))) return '신발';
+  if(['가방','백','bag'].some(k=>x.includes(norm(k)))) return '가방';
+  return x;
+}
+
+function inferMaxPrice(query='', explicit=null){
+  // 사용자가 '20만원'처럼 단위를 붙여 말한 경우, LLM이 max_price를 20으로
+  // 전달해도 실제 의미인 200,000원을 우선 적용한다.
+  const q=String(query).replace(/,/g,'');
+  let m=q.match(/(\d+(?:\.\d+)?)\s*만원/);
+  if(m) return Math.round(Number(m[1])*10000);
+  m=q.match(/(\d{4,})\s*원/);
+  if(m) return Number(m[1]);
+  if(explicit!=null && explicit!==''){
+    const n=Number(explicit);
+    if(Number.isFinite(n)) return n;
+  }
+  return null;
+}
+
+function inferColor(query='', explicit=''){
+  if(explicit) return explicit;
+  const q=norm(query);
+  const colors=['브라운','갈색','블랙','검정','차콜','네이비','크림','아이보리','화이트','흰색','블루','그레이','회색','인디고'];
+  return colors.find(c=>q.includes(norm(c)))||'';
+}
+
+function colorAliases(v=''){
+  const x=norm(v);
+  const groups={
+    '브라운':['브라운','갈색','brown'],
+    '블랙':['블랙','검정','black'],
+    '화이트':['화이트','흰색','white'],
+    '그레이':['그레이','회색','gray','grey']
+  };
+  for(const [k,vals] of Object.entries(groups)) if(vals.some(a=>x.includes(norm(a)))) return vals.map(norm);
+  return [x];
+}
+
+function searchProducts(products,args={}){
+  const {query='',category='',gender='',limit=6}=args;
+  const maxPrice=inferMaxPrice(query,args.max_price);
+  const wantedColor=inferColor(query,args.color||'');
+  const qTokens=String(query).toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').split(' ').map(norm).filter(Boolean)
+    .filter(t=>!['이하','미만','이상','추천','찾아줘','보여줘','상품'].includes(t) && !/^\d+$/.test(t));
+  const c=normalizeCategory(category||query);
+  const g=normalizeGender(gender);
+  const aliases=colorAliases(wantedColor);
+
+  return products.map(p=>{
+    const pg=normalizeGender(p.gender);
+    if(g && pg!==g) return null;
+
+    if(c){
+      const pc=norm(`${p.category} ${p.subcategory} ${p.name}`);
+      if(c==='재킷' && !['재킷','자켓','블루종'].some(k=>pc.includes(norm(k)))) return null;
+      else if(c==='아우터' && !norm(p.category).includes('아우터')) return null;
+      else if(c==='상의' && !norm(p.category).includes('상의')) return null;
+      else if(c==='팬츠' && !['팬츠','하의','바지'].some(k=>pc.includes(norm(k)))) return null;
+      else if(c==='신발' && !norm(p.category).includes('신발')) return null;
+      else if(c==='가방' && !norm(p.category).includes('가방')) return null;
+    }
+
+    if(maxPrice!=null && Number(p.price)>maxPrice) return null;
+    if(wantedColor){
+      const productColors=(p.colors||[]).map(norm);
+      if(!productColors.some(pc=>aliases.some(a=>pc.includes(a)||a.includes(pc)))) return null;
+    }
+
+    const hay=norm([p.name,p.gender,p.category,p.subcategory,...(p.colors||[]),...(p.style||[]),...(p.occasions||[]),p.fit,p.length,p.agent_notes].join(' '));
+    let score=0;
+    for(const t of qTokens) if(hay.includes(t)) score+=2;
+    if(wantedColor) score+=4;
+    if(c) score+=2;
+    return {p,score};
+  }).filter(Boolean).sort((a,b)=>b.score-a.score||a.p.price-b.p.price)
+    .slice(0,Math.max(1,Math.min(Number(limit)||6,8))).map(x=>x.p);
+}
 function getProduct(products,args={}){ return products.find(p=>norm(p.id)===norm(args.id))||null; }
 
 function findMatchingItems(products,args={}){
