@@ -1,18 +1,20 @@
-# styler MVP v1
+# styler MVP v2 — Real Agent
 
-현재 작동하는 화면
-- 홈
-- 상품 목록
-- 상품 상세
-- 색상/사이즈 표시
-- AI에게 물어보기 바텀시트
-- AI 쇼핑 히스토리
-- 상품 JSON 연결
+추가된 기능
+- Vercel Function `/api/agent`
+- OpenAI Responses API
+- LLM이 직접 tool을 선택하는 Agent loop
+- `search_products`
+- `get_product`
+- `find_matching_items`
+- 실제 products.json 검색 결과를 상품 카드로 노출
+- 현재 PDP 상품 ID를 Agent context로 전달
+- 간단한 대화 히스토리 유지
 
-아직 안 붙인 기능
-- 실제 LLM
-- 사진 업로드/분석
-- Agent Tool 호출
-- 실제 상담 저장
+배포 전 필수
+Vercel > Project > Settings > Environment Variables에 `OPENAI_API_KEY`를 추가하고 재배포하세요.
 
-이 버전은 GitHub에 업로드한 뒤 Vercel에 Import해서 배포할 수 있습니다.
+다음 단계
+- 이미지 업로드
+- 보유 의류 이미지 분석
+- 상담 history 저장

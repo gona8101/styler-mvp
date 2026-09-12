@@ -1,54 +1,9 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>상품 상세 · styler</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <main class="phone">
-    <header class="topbar three">
-      <button class="icon-btn" onclick="history.back()">←</button>
-      <div></div>
-      <div class="icons">♡ 🛒</div>
-    </header>
-
-    <div id="detail"></div>
-
-    <div class="purchase-bar">
-      <button class="ai-btn" id="openAgent">✦ AI에게 물어보기</button>
-      <button class="buy-btn">구매하기</button>
-    </div>
-
-    <div id="agentSheet" class="sheet-backdrop hidden">
-      <section class="sheet">
-        <div class="handle"></div>
-        <div class="sheet-head">
-          <div>
-            <strong>AI Shopping Agent</strong>
-            <small id="contextProduct"></small>
-          </div>
-          <button class="icon-btn" id="closeAgent">✕</button>
-        </div>
-        <div class="quick-actions">
-          <button>내 옷과 코디</button>
-          <button>나한테 어울릴까?</button>
-          <button>비슷한 상품</button>
-          <button>상품 비교</button>
-        </div>
-        <div class="chat-placeholder">
-          <div class="agent-msg">이 상품을 보고 계시네요. 무엇을 도와드릴까요?</div>
-        </div>
-        <div class="composer">
-          <button>＋</button>
-          <input placeholder="예: 내 검정 바지랑 어울려?" />
-          <button>↑</button>
-        </div>
-      </section>
-    </div>
-  </main>
-  <script src="app.js"></script>
-  <script>loadProductDetail();</script>
-</body>
-</html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><title>상품 상세 · styler</title><link rel="stylesheet" href="styles.css"/></head><body><main class="phone">
+<header class="topbar three"><button class="icon-btn" onclick="history.back()">←</button><div></div><div class="icons">♡ 🛒</div></header>
+<div id="detail"></div>
+<div class="purchase-bar"><button class="ai-btn" id="openAgent">✦ AI에게 물어보기</button><button class="buy-btn">구매하기</button></div>
+<div id="agentSheet" class="sheet-backdrop hidden"><section class="sheet"><div class="handle"></div><div class="sheet-head"><div><strong>AI 쇼핑 어시스턴트 <em>BETA</em></strong><small id="contextProduct"></small></div><button class="icon-btn" id="closeAgent">✕</button></div>
+<div class="quick-actions"><button data-prompt="이 상품이 나한테 어울릴지 판단해줘">나한테 어울릴까?</button><button data-prompt="이 상품과 비슷하지만 더 저렴한 상품 찾아줘">더 저렴한 상품</button><button data-prompt="내가 가진 검정 와이드 팬츠랑 이 상품을 코디해줘. 이미 바지는 있으니 바지는 추천하지 마.">검정 와이드팬츠 코디</button><button data-prompt="이 상품과 비교해볼 만한 비슷한 상품을 찾아줘">상품 비교</button></div>
+<div id="chatArea" class="chat-area"><div class="agent-msg">지금 보고 있는 상품을 기준으로 찾아볼게요. 상품 검색이나 코디를 물어보세요.</div></div>
+<div class="composer"><button class="attach-btn" title="사진 업로드는 다음 단계에서 연결">＋</button><input id="agentInput" placeholder="예: 20만원 이하 브라운 재킷 찾아줘"/><button id="sendAgent" class="send-btn">↑</button></div>
+</section></div></main><script src="app.js"></script><script>loadProductDetail();</script></body></html>
