@@ -1,0 +1,962 @@
+[
+  {
+    "id": "W01",
+    "gender": "WOMEN",
+    "category": "아우터",
+    "subcategory": "재킷",
+    "name": "브라운 스웨이드 블루종",
+    "price": 159000,
+    "colors": [
+      "브라운"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "페이크 스웨이드"
+    ],
+    "fit": "루즈핏",
+    "length": "세미크롭",
+    "season": [
+      "가을",
+      "초겨울"
+    ],
+    "style": [
+      "캐주얼",
+      "미니멀",
+      "빈티지"
+    ],
+    "occasions": [
+      "데일리",
+      "주말",
+      "캐주얼 출근"
+    ],
+    "matches_bottoms": [
+      "블랙 와이드 팬츠",
+      "스트레이트 데님",
+      "슬랙스"
+    ],
+    "matches_tops": [
+      "화이트 티셔츠",
+      "크림 니트",
+      "셔츠"
+    ],
+    "matches_shoes": [
+      "로퍼",
+      "스니커즈"
+    ],
+    "matches_bags": [
+      "블랙 숄더백",
+      "미니 크로스백"
+    ],
+    "warmth": 3,
+    "formality": 2,
+    "versatility": 4,
+    "agent_notes": "브라운 컬러가 가을 무드를 만들고, 세미크롭 기장이 와이드 팬츠와 균형이 좋음."
+  },
+  {
+    "id": "W02",
+    "gender": "WOMEN",
+    "category": "아우터",
+    "subcategory": "재킷",
+    "name": "차콜 크롭 블레이저",
+    "price": 129000,
+    "colors": [
+      "차콜"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "폴리",
+      "레이온"
+    ],
+    "fit": "세미오버핏",
+    "length": "크롭",
+    "season": [
+      "봄",
+      "가을"
+    ],
+    "style": [
+      "미니멀",
+      "모던",
+      "포멀"
+    ],
+    "occasions": [
+      "출근",
+      "데이트",
+      "모임"
+    ],
+    "matches_bottoms": [
+      "블랙 와이드 팬츠",
+      "슬랙스",
+      "데님"
+    ],
+    "matches_tops": [
+      "화이트 셔츠",
+      "크림 니트"
+    ],
+    "matches_shoes": [
+      "로퍼",
+      "플랫슈즈"
+    ],
+    "matches_bags": [
+      "블랙 숄더백"
+    ],
+    "warmth": 2,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "크롭 기장이라 하이웨이스트 하의와 비율이 좋고 출근룩 활용도가 높음."
+  },
+  {
+    "id": "W03",
+    "gender": "WOMEN",
+    "category": "아우터",
+    "subcategory": "재킷",
+    "name": "블랙 레더 재킷",
+    "price": 189000,
+    "colors": [
+      "블랙"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "페이크 레더"
+    ],
+    "fit": "레귤러핏",
+    "length": "기본",
+    "season": [
+      "봄",
+      "가을"
+    ],
+    "style": [
+      "시크",
+      "캐주얼",
+      "모던"
+    ],
+    "occasions": [
+      "데일리",
+      "데이트",
+      "주말"
+    ],
+    "matches_bottoms": [
+      "데님",
+      "블랙 슬랙스"
+    ],
+    "matches_tops": [
+      "화이트 티셔츠",
+      "니트"
+    ],
+    "matches_shoes": [
+      "스니커즈",
+      "로퍼"
+    ],
+    "matches_bags": [
+      "블랙 숄더백"
+    ],
+    "warmth": 2,
+    "formality": 2,
+    "versatility": 4,
+    "agent_notes": "블랙이라 코디 범용성이 높고, 데님이나 슬랙스 모두 매치 가능."
+  },
+  {
+    "id": "W04",
+    "gender": "WOMEN",
+    "category": "상의",
+    "subcategory": "니트",
+    "name": "소프트 크림 니트",
+    "price": 69000,
+    "colors": [
+      "크림"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "아크릴",
+      "울 블렌드"
+    ],
+    "fit": "슬림핏",
+    "length": "기본",
+    "season": [
+      "가을",
+      "겨울"
+    ],
+    "style": [
+      "미니멀",
+      "페미닌"
+    ],
+    "occasions": [
+      "출근",
+      "데이트",
+      "데일리"
+    ],
+    "matches_bottoms": [
+      "블랙 와이드 팬츠",
+      "데님",
+      "스커트"
+    ],
+    "matches_outer": [
+      "W01",
+      "W02"
+    ],
+    "matches_shoes": [
+      "로퍼",
+      "스니커즈"
+    ],
+    "warmth": 3,
+    "formality": 3,
+    "versatility": 5,
+    "agent_notes": "브라운/차콜 아우터 안에 받쳐 입기 쉬운 중립색 이너."
+  },
+  {
+    "id": "W05",
+    "gender": "WOMEN",
+    "category": "상의",
+    "subcategory": "셔츠",
+    "name": "화이트 코튼 셔츠",
+    "price": 59000,
+    "colors": [
+      "화이트"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "코튼"
+    ],
+    "fit": "루즈핏",
+    "length": "기본",
+    "season": [
+      "봄",
+      "가을"
+    ],
+    "style": [
+      "클래식",
+      "미니멀"
+    ],
+    "occasions": [
+      "출근",
+      "데일리"
+    ],
+    "matches_bottoms": [
+      "블랙 와이드 팬츠",
+      "데님"
+    ],
+    "matches_outer": [
+      "W01",
+      "W02",
+      "W03"
+    ],
+    "matches_shoes": [
+      "로퍼",
+      "스니커즈"
+    ],
+    "warmth": 1,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "대부분의 재킷과 잘 어울리는 기본 이너로 코디 실패 확률이 낮음."
+  },
+  {
+    "id": "W06",
+    "gender": "WOMEN",
+    "category": "하의",
+    "subcategory": "슬랙스",
+    "name": "블랙 와이드 슬랙스",
+    "price": 89000,
+    "colors": [
+      "블랙"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "폴리",
+      "레이온"
+    ],
+    "fit": "와이드핏",
+    "length": "롱",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "미니멀",
+      "모던"
+    ],
+    "occasions": [
+      "출근",
+      "데일리",
+      "모임"
+    ],
+    "matches_outer": [
+      "W01",
+      "W02",
+      "W03"
+    ],
+    "matches_tops": [
+      "W04",
+      "W05"
+    ],
+    "matches_shoes": [
+      "W09",
+      "W10"
+    ],
+    "matches_bags": [
+      "W08"
+    ],
+    "warmth": 2,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "와이드 실루엣이라 짧거나 정돈된 상의와 조합이 좋음."
+  },
+  {
+    "id": "W07",
+    "gender": "WOMEN",
+    "category": "하의",
+    "subcategory": "데님",
+    "name": "인디고 스트레이트 데님",
+    "price": 79000,
+    "colors": [
+      "인디고"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": [
+      "코튼 데님"
+    ],
+    "fit": "스트레이트핏",
+    "length": "기본",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "캐주얼",
+      "클래식"
+    ],
+    "occasions": [
+      "데일리",
+      "주말"
+    ],
+    "matches_outer": [
+      "W01",
+      "W03"
+    ],
+    "matches_tops": [
+      "W04",
+      "W05"
+    ],
+    "matches_shoes": [
+      "W10"
+    ],
+    "warmth": 2,
+    "formality": 1,
+    "versatility": 5,
+    "agent_notes": "브라운 스웨이드와 색 조합이 자연스럽고 캐주얼 활용도가 높음."
+  },
+  {
+    "id": "W08",
+    "gender": "WOMEN",
+    "category": "가방",
+    "subcategory": "숄더백",
+    "name": "블랙 미니 숄더백",
+    "price": 99000,
+    "colors": [
+      "블랙"
+    ],
+    "sizes": [
+      "ONE"
+    ],
+    "material": [
+      "비건 레더"
+    ],
+    "fit": "미니",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "미니멀",
+      "시크"
+    ],
+    "occasions": [
+      "출근",
+      "데이트",
+      "데일리"
+    ],
+    "matches_outer": [
+      "W01",
+      "W02",
+      "W03"
+    ],
+    "warmth": 0,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "컬러가 중립적이라 브라운/차콜/블랙 아우터 모두에 매치하기 쉬움."
+  },
+  {
+    "id": "W09",
+    "gender": "WOMEN",
+    "category": "신발",
+    "subcategory": "로퍼",
+    "name": "블랙 클래식 로퍼",
+    "price": 119000,
+    "colors": [
+      "블랙"
+    ],
+    "sizes": [
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250"
+    ],
+    "material": [
+      "비건 레더"
+    ],
+    "fit": "레귤러",
+    "season": [
+      "봄",
+      "가을",
+      "겨울"
+    ],
+    "style": [
+      "클래식",
+      "미니멀"
+    ],
+    "occasions": [
+      "출근",
+      "모임",
+      "데이트"
+    ],
+    "matches_bottoms": [
+      "W06",
+      "W07"
+    ],
+    "warmth": 1,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "출근룩 완성도가 높고 와이드 슬랙스와 안정적으로 어울림."
+  },
+  {
+    "id": "W10",
+    "gender": "WOMEN",
+    "category": "신발",
+    "subcategory": "스니커즈",
+    "name": "크림 레트로 스니커즈",
+    "price": 89000,
+    "colors": [
+      "크림",
+      "베이지"
+    ],
+    "sizes": [
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250"
+    ],
+    "material": [
+      "합성피혁",
+      "메쉬"
+    ],
+    "fit": "레귤러",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "캐주얼",
+      "레트로"
+    ],
+    "occasions": [
+      "데일리",
+      "주말"
+    ],
+    "matches_bottoms": [
+      "W06",
+      "W07"
+    ],
+    "warmth": 1,
+    "formality": 1,
+    "versatility": 4,
+    "agent_notes": "무거운 가을 아우터를 캐주얼하게 풀어주기 좋은 밝은 톤 스니커즈."
+  },
+  {
+    "id": "M01",
+    "gender": "MEN",
+    "category": "아우터",
+    "subcategory": "재킷",
+    "name": "딥브라운 스웨이드 재킷",
+    "price": 179000,
+    "colors": [
+      "딥브라운"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "페이크 스웨이드"
+    ],
+    "fit": "레귤러핏",
+    "length": "기본",
+    "season": [
+      "가을",
+      "초겨울"
+    ],
+    "style": [
+      "캐주얼",
+      "빈티지"
+    ],
+    "occasions": [
+      "데일리",
+      "주말",
+      "캐주얼 출근"
+    ],
+    "matches_bottoms": [
+      "차콜 와이드 슬랙스",
+      "블루 데님"
+    ],
+    "matches_tops": [
+      "아이보리 티셔츠",
+      "블루 셔츠"
+    ],
+    "matches_shoes": [
+      "더비",
+      "러너 스니커즈"
+    ],
+    "matches_bags": [
+      "블랙 크로스백"
+    ],
+    "warmth": 3,
+    "formality": 2,
+    "versatility": 4,
+    "agent_notes": "브라운 아우터로 가을 무드를 내기 쉽고 차콜/블루 계열 하의와 잘 맞음."
+  },
+  {
+    "id": "M02",
+    "gender": "MEN",
+    "category": "아우터",
+    "subcategory": "블레이저",
+    "name": "차콜 울 블레이저",
+    "price": 169000,
+    "colors": [
+      "차콜"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "울 블렌드"
+    ],
+    "fit": "세미오버핏",
+    "length": "기본",
+    "season": [
+      "가을",
+      "겨울"
+    ],
+    "style": [
+      "미니멀",
+      "포멀"
+    ],
+    "occasions": [
+      "출근",
+      "모임",
+      "데이트"
+    ],
+    "matches_bottoms": [
+      "차콜 슬랙스",
+      "블루 데님"
+    ],
+    "matches_tops": [
+      "아이보리 티셔츠",
+      "블루 셔츠"
+    ],
+    "matches_shoes": [
+      "더비"
+    ],
+    "warmth": 3,
+    "formality": 5,
+    "versatility": 5,
+    "agent_notes": "출근 및 격식 있는 자리까지 활용 가능하고, 세미오버핏으로 트렌디함."
+  },
+  {
+    "id": "M03",
+    "gender": "MEN",
+    "category": "아우터",
+    "subcategory": "워크 재킷",
+    "name": "네이비 워크 재킷",
+    "price": 139000,
+    "colors": [
+      "네이비"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "코튼"
+    ],
+    "fit": "릴랙스핏",
+    "length": "기본",
+    "season": [
+      "봄",
+      "가을"
+    ],
+    "style": [
+      "워크웨어",
+      "캐주얼"
+    ],
+    "occasions": [
+      "데일리",
+      "주말"
+    ],
+    "matches_bottoms": [
+      "블루 데님",
+      "차콜 슬랙스"
+    ],
+    "matches_tops": [
+      "아이보리 티셔츠"
+    ],
+    "matches_shoes": [
+      "러너 스니커즈"
+    ],
+    "warmth": 2,
+    "formality": 1,
+    "versatility": 4,
+    "agent_notes": "실용적인 캐주얼 스타일에 적합하고 데님과 궁합이 좋음."
+  },
+  {
+    "id": "M04",
+    "gender": "MEN",
+    "category": "상의",
+    "subcategory": "티셔츠",
+    "name": "아이보리 헤비 티셔츠",
+    "price": 49000,
+    "colors": [
+      "아이보리"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "코튼"
+    ],
+    "fit": "릴랙스핏",
+    "length": "기본",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "미니멀",
+      "캐주얼"
+    ],
+    "occasions": [
+      "데일리",
+      "주말"
+    ],
+    "matches_outer": [
+      "M01",
+      "M02",
+      "M03"
+    ],
+    "matches_bottoms": [
+      "M06",
+      "M07"
+    ],
+    "warmth": 1,
+    "formality": 1,
+    "versatility": 5,
+    "agent_notes": "모든 남성 아우터 안에 받쳐 입기 쉬운 기본 이너."
+  },
+  {
+    "id": "M05",
+    "gender": "MEN",
+    "category": "상의",
+    "subcategory": "셔츠",
+    "name": "블루 옥스포드 셔츠",
+    "price": 69000,
+    "colors": [
+      "블루"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "코튼"
+    ],
+    "fit": "레귤러핏",
+    "length": "기본",
+    "season": [
+      "봄",
+      "가을"
+    ],
+    "style": [
+      "클래식",
+      "프레피"
+    ],
+    "occasions": [
+      "출근",
+      "모임",
+      "데이트"
+    ],
+    "matches_outer": [
+      "M01",
+      "M02"
+    ],
+    "matches_bottoms": [
+      "M06",
+      "M07"
+    ],
+    "warmth": 1,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "차콜 블레이저와 특히 잘 맞고, 데님과 매치하면 캐주얼하게도 활용 가능."
+  },
+  {
+    "id": "M06",
+    "gender": "MEN",
+    "category": "하의",
+    "subcategory": "슬랙스",
+    "name": "차콜 와이드 슬랙스",
+    "price": 89000,
+    "colors": [
+      "차콜"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "폴리",
+      "레이온"
+    ],
+    "fit": "와이드핏",
+    "length": "롱",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "미니멀",
+      "모던"
+    ],
+    "occasions": [
+      "출근",
+      "데일리"
+    ],
+    "matches_outer": [
+      "M01",
+      "M02"
+    ],
+    "matches_tops": [
+      "M04",
+      "M05"
+    ],
+    "matches_shoes": [
+      "M09"
+    ],
+    "warmth": 2,
+    "formality": 4,
+    "versatility": 5,
+    "agent_notes": "재킷과 함께 입었을 때 정돈된 실루엣을 만들기 좋음."
+  },
+  {
+    "id": "M07",
+    "gender": "MEN",
+    "category": "하의",
+    "subcategory": "데님",
+    "name": "워시드 블루 데님",
+    "price": 99000,
+    "colors": [
+      "블루"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": [
+      "코튼 데님"
+    ],
+    "fit": "스트레이트핏",
+    "length": "기본",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "캐주얼",
+      "빈티지"
+    ],
+    "occasions": [
+      "데일리",
+      "주말"
+    ],
+    "matches_outer": [
+      "M01",
+      "M03"
+    ],
+    "matches_tops": [
+      "M04",
+      "M05"
+    ],
+    "matches_shoes": [
+      "M10"
+    ],
+    "warmth": 2,
+    "formality": 1,
+    "versatility": 5,
+    "agent_notes": "스웨이드 재킷과 자연스러운 가을 캐주얼 조합을 만들기 좋음."
+  },
+  {
+    "id": "M08",
+    "gender": "MEN",
+    "category": "가방",
+    "subcategory": "크로스백",
+    "name": "블랙 나일론 크로스백",
+    "price": 79000,
+    "colors": [
+      "블랙"
+    ],
+    "sizes": [
+      "ONE"
+    ],
+    "material": [
+      "나일론"
+    ],
+    "fit": "미디엄",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "캐주얼",
+      "미니멀"
+    ],
+    "occasions": [
+      "데일리",
+      "여행",
+      "주말"
+    ],
+    "matches_outer": [
+      "M01",
+      "M03"
+    ],
+    "warmth": 0,
+    "formality": 1,
+    "versatility": 5,
+    "agent_notes": "실용성이 높고 캐주얼 재킷과 잘 어울림."
+  },
+  {
+    "id": "M09",
+    "gender": "MEN",
+    "category": "신발",
+    "subcategory": "더비",
+    "name": "블랙 레더 더비",
+    "price": 139000,
+    "colors": [
+      "블랙"
+    ],
+    "sizes": [
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280"
+    ],
+    "material": [
+      "비건 레더"
+    ],
+    "fit": "레귤러",
+    "season": [
+      "봄",
+      "가을",
+      "겨울"
+    ],
+    "style": [
+      "포멀",
+      "클래식"
+    ],
+    "occasions": [
+      "출근",
+      "모임",
+      "데이트"
+    ],
+    "matches_bottoms": [
+      "M06"
+    ],
+    "warmth": 1,
+    "formality": 5,
+    "versatility": 4,
+    "agent_notes": "슬랙스와 궁합이 좋고 출근/포멀 상황에 적합."
+  },
+  {
+    "id": "M10",
+    "gender": "MEN",
+    "category": "신발",
+    "subcategory": "스니커즈",
+    "name": "그레이 러너 스니커즈",
+    "price": 109000,
+    "colors": [
+      "그레이"
+    ],
+    "sizes": [
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280"
+    ],
+    "material": [
+      "메쉬",
+      "합성피혁"
+    ],
+    "fit": "레귤러",
+    "season": [
+      "사계절"
+    ],
+    "style": [
+      "캐주얼",
+      "스포티"
+    ],
+    "occasions": [
+      "데일리",
+      "주말"
+    ],
+    "matches_bottoms": [
+      "M07",
+      "M06"
+    ],
+    "warmth": 1,
+    "formality": 1,
+    "versatility": 4,
+    "agent_notes": "데님과 자연스럽고, 와이드 슬랙스에 매치하면 캐주얼한 믹스 스타일 가능."
+  }
+]
